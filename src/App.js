@@ -1,13 +1,14 @@
 import "./App.css";
 import Header from "./components/Header";
-// import {  Route, Routes } from "react-router-dom";
+import Container from './Container.js';
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Container />
-      <Footer /> */}
+      <Container />
+      <Footer />
     </div>
   );
 }
