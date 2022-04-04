@@ -1,3 +1,10 @@
+import Home from './components/Home';
+import Search from './components/Search';
+import AboutUs from './components/AboutUs';
+import NotFound from './components/NotFound';
+import {  Route, Routes } from "react-router-dom";
+
+
 function Container() {
   return (
     <div>
@@ -10,3 +17,4 @@ function Container() {
     </div>
   );
 }
+export default Container;
