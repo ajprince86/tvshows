@@ -1,9 +1,13 @@
 import React from 'react'
 
-function AboutUs() {
-  return (
-    <div>
-      <h1> This is About Us page</h1>
+function AboutUs({ name, title, introduction, image }) {
+  return (// use map 
+    <div className = "aboutUs">
+      <h1> Team Introduction </h1>
+      <h3> { name }</h3>
+      <img ></img>
+      <h3> { title }</h3>
+      <h3> { introduction }</h3>
     </div>
   )
 }

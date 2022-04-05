@@ -32,6 +32,7 @@ function Search(){
             console.log(error);
         }
     }
+    
     const renderPost = ()=>{
         return(
             tvShowData.map((element,index) =>{
