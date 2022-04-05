@@ -1,0 +1,8 @@
+.TvShows-gp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.TvShows-p:hover{
+    cursor: pointer;
+}
