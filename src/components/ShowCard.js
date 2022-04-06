@@ -1,34 +1,70 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getTvShowDataById } from '../services/constants';
+import "../styles/showcard.css";
 
 function ShowCard() {
     const [data,setData] = useState([]);
     const { id } = useParams();
 
-    useEffect(() =>{
-        const fetchData = async () =>{
-            const res = await getTvShowDataById(id);
-            console.log("I am here" + id);
-            console.log(res);
-            setData(res);
-        }
-        fetchData();
-    }, [id])
+    // const tempId = parseInt(id);
+
+    console.log(id);
+
+    // useEffect(() =>{
+    //     const fetchData = async () =>{
+    //         try {
+    //             const res = await getTvShowDataById(tempId);
+    //             // console.log(res.data);
+    //             setData(res.data);
+    //         }
+    //      catch (error) {
+    //        console.log(error); 
+    //     }
+    // }
+    //     fetchData();
+    // }, [id])
+
+    async function fetchData(){
+      try {
+        const res = await getTvShowDataById(id);
+        setData(res.data);
+      } catch (error) {
+        console.log(error); 
+      }
+    }
+
+    useEffect(()=>{
+      fetchData();
+    },[])
+   
 
 
   return (
-    <div>
-      <h1>{data.data.name}</h1>
-      <h5> genres: {data.data.genres}</h5>
-      <h5>Rating average: {data.data.rating.average}</h5>
-      <h5> Summary: {data.data.summary}</h5>
-      <h5>Status: {data.data.status}</h5>
-      <h5>Premiered on: {data.data.premiered}</h5>
-      <h5>network country name: {data.data.network.country.name}</h5>
-       {(data.data.image !== null)? <img src = {data.data.image.medium} alt= "TvShow pic"/> : "picture not avaialble"}
+    <div className="show-card-gp">
+      <div className="show-card-p1">
+          {(data.image)? <img src = {data.image.medium} alt = "tv show pic"/> : "picture not avaialble"}
+      </div>
+      <div className="show-card-p2">
+          <div className="show-card-c1">
+              <h1>{data.name}</h1>
+          </div>
+          <div className="show-card-c2">
+              <div>
+                <h5><span>genres: </span>{JSON.stringify(data.genres)}</h5>
+                <h5><span>Status: </span>{data.status}</h5>
+                <h5><span>Rating average: </span>{(data.rating) ? JSON.stringify(data.rating.average) : "data not available"}</h5>
+                <h5><span>Premiered on: </span>{data.premiered}</h5>
+                <h5><span>Network Country Name: </span>{(data.network) ? data.network.country.name: "data not available"}</h5>
+              </div>
+              <div>
+                <h5><span>Summary: </span>{(data.summary)? <h5 id="sum-id">{JSON.stringify(data.summary)}</h5> : "data is not available"}</h5> 
+              </div>
+          </div>
+      </div>
     </div>
   )
 }
 
-export default ShowCard
+export default ShowCard;
+// {data.genres[0]} {data.genres[1]}

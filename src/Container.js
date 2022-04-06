@@ -11,7 +11,7 @@ function Container() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/search/*" element={<Search />} />
         <Route path="/search/:id" element={<ShowCard/>} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
