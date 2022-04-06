@@ -1,13 +1,15 @@
 import React from 'react'
+import team from '../data';
+import Team from './Team';
 
-function AboutUs({ name, title, introduction, image }) {
+
+function AboutUs() {
   return (// use map 
     <div className = "aboutUs">
       <h1> Team Introduction </h1>
-      <h3> { name }</h3>
-      <img ></img>
-      <h3> { title }</h3>
-      <h3> { introduction }</h3>
+       {team.map((teamData, index) => {
+         return <Team teamData = {teamData} key={index}/>
+       })}
     </div>
   )
 }
