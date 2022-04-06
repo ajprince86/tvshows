@@ -8,7 +8,7 @@ function TvShows({ data }) {
     <div className = "TvShows-gp">
         <div className = "TvShows-p" onClick={() => navigate(`/search/${data.show.id}`)}>
         <h1>{data.show.name}</h1>
-        {(data.show.image !== null)? <img src = {data.show.image.medium} alt= "TvShow pic"/> : "picture not avaialble"}
+        {(data.show.image !== null)? <img className="stock-card-img" src = {data.show.image.medium} alt= "TvShow pic"/> : "picture not avaialble"}
         </div>
     </div>
   )

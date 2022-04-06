@@ -57,11 +57,20 @@ function ShowCard() {
   return (
     <div className="show-card-gp">
       <div className="show-card-p1">
-          {(data.image)? <img src = {data.image.medium} alt = "tv show pic"/> : "picture not avaialble"}
-          {(seasonData||[]).map((ele)=>{
-            return <button>Season {ele.number}</button>
-          })
-          }
+          {(data.image)? <img className="stock-card-img" src = {data.image.medium} alt = "tv show pic"/> : "picture not avaialble"}
+          <div className="show-card-seasons">
+
+            <h5> Seasons available: {seasonData.length}</h5>
+
+            {(seasonData||[]).map((ele)=>{
+              return<section>
+                <option></option> </section>
+            // {/* // return <button>Season {ele.number}</button>
+            // // return <h4></h4>
+            // // <h5 className="h5-seasons">Season{ele.number}</h5>
+          }) 
+         } 
+          </div>
       </div>
       <div className="show-card-p2">
           <div className="show-card-c1">

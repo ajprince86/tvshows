@@ -17,6 +17,14 @@
     padding: 20px;
    
 }
+.show-card-seasons{
+    display: flex;
+   
+    
+}
+.h5-seasons{
+    margin:5px;
+}
 button{
     align-self: center;
     margin: 10px;
@@ -55,13 +63,13 @@ span{
 h5{
     font-size: medium;
 }
-img{
+.stock-card-img{
     border-radius: .2em; 
     height: 450px;
     width: 325px; 
     align-self: center;
 }
-img:hover{
+.stock-card-img:hover{
     height: 466px;
     width: 338px;
     border-radius: .2em;
