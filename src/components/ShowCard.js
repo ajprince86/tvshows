@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getTvShowDataById, getSeasonDataById} from '../services/constants';
 import "../styles/showcard.css";
+import Carousel from "react-elastic-carousel"
+
 
 function ShowCard() {
     const [data,setData] = useState([]);
@@ -62,14 +64,23 @@ function ShowCard() {
 
             <h5> Seasons available: {seasonData.length}</h5>
 
-            {(seasonData||[]).map((ele)=>{
-              return<section>
-                <option></option> </section>
-            // {/* // return <button>Season {ele.number}</button>
+           
+              <Carousel> 
+              {(seasonData || []).map(ele=>{
+return (ele.image) ? <img src={ele.image.medium} alt="amari"/> : "Image not available"
+
+              })
+            }
+
+  
+
+           </Carousel>
+          
+            {/* // /* // return <button>Season {ele.number}</button>
             // // return <h4></h4>
-            // // <h5 className="h5-seasons">Season{ele.number}</h5>
-          }) 
-         } 
+            // // <h5 className="h5-seasons">Season{ele.number}</h5> */}
+          
+         
           </div>
       </div>
       <div className="show-card-p2">
