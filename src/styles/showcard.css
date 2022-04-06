@@ -10,11 +10,22 @@
 .show-card-p1{
     /* border: 1px solid red; */
     display: flex;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
     margin: 20px;
     padding: 20px;
    
+}
+button{
+    align-self: center;
+    margin: 10px;
+    width:150px;
+    height:30px;
+    border-radius: .5em;
+    color:rgb(238, 94, 23);
+    font-size: medium;
+    font-weight: bold;
 }
 .show-card-p2{
     /* border: 1px solid red;  */
@@ -45,7 +56,10 @@ h5{
     font-size: medium;
 }
 img{
-    border-radius: .2em;  
+    border-radius: .2em; 
+    height: 450px;
+    width: 325px; 
+    align-self: center;
 }
 img:hover{
     height: 466px;
@@ -53,4 +67,11 @@ img:hover{
     border-radius: .2em;
     box-shadow: 2px 0px 2px 0px gray;
     
+}
+button:hover{
+    width:160px;
+    height:35px;
+    background-color: rgb(167, 164, 164);
+    color:rgb(238, 94, 23);
+    font-weight:bold;
 }
