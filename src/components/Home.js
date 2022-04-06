@@ -11,7 +11,7 @@ function Home() {
       {favoriteLists.map((show, key) => {
         return (
           <div className="show">
-            <img src={show} key={key} alt="show-title" />
+            <img className="home-img" src={show} key={key} alt="show-title" />
           </div>
         );
       })}
