@@ -26,6 +26,17 @@ export async function getTvShowDataById(id){
     }
 }
 
+export async function getSeasonDataById(id){
+    try {
+        const response3 = await axios.get(`${CLIENT_URL2}${id}/seasons`);
+        console.log(response3.data);
+        return response3.data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
 export const favoriteLists = [
   "https://static.tvmaze.com/uploads/images/medium_portrait/28/72341.jpg",
   "https://static.tvmaze.com/uploads/images/medium_portrait/4/11322.jpg",

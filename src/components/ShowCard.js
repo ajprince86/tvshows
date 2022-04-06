@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getTvShowDataById } from '../services/constants';
+import { getTvShowDataById, getSeasonDataById} from '../services/constants';
 import "../styles/showcard.css";
 
 function ShowCard() {
     const [data,setData] = useState([]);
     const { id } = useParams();
+
+    const [seasonData, setSeasonData] = useState([])
 
     // const tempId = parseInt(id);
 
@@ -37,13 +39,29 @@ function ShowCard() {
     useEffect(()=>{
       fetchData();
     },[])
-   
+
+  async function fetchSeason(){
+    try {
+        const res = await getSeasonDataById(id);
+        console.log(res);
+        setSeasonData(res);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(()=>{
+    fetchSeason();
+  },[])
 
 
   return (
     <div className="show-card-gp">
       <div className="show-card-p1">
           {(data.image)? <img src = {data.image.medium} alt = "tv show pic"/> : "picture not avaialble"}
+          {(seasonData||[]).map((ele)=>{
+            return <button>Season {ele.number}</button>
+          })
+          }
       </div>
       <div className="show-card-p2">
           <div className="show-card-c1">
