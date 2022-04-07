@@ -1,5 +1,5 @@
 import React from 'react'
-import team from '../data';
+import team from '../data/teamData';
 import Team from './Team';
 
 
