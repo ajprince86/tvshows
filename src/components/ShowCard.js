@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getTvShowDataById, getSeasonDataById} from '../services/constants';
+// import getTvShowDataById from '../services/constants';
+// import getSeasonDataById from '../services/constants';
 import "../styles/showcard.css";
-import Carousel from "react-elastic-carousel"
+import Carousel from "react-elastic-carousel";
+import pic_not_available from "../images/pic_not_available.jpg"
+
 
 
 function ShowCard() {
@@ -12,22 +16,8 @@ function ShowCard() {
     const [seasonData, setSeasonData] = useState([])
 
     // const tempId = parseInt(id);
+    // console.log(id);
 
-    console.log(id);
-
-    // useEffect(() =>{
-    //     const fetchData = async () =>{
-    //         try {
-    //             const res = await getTvShowDataById(tempId);
-    //             // console.log(res.data);
-    //             setData(res.data);
-    //         }
-    //      catch (error) {
-    //        console.log(error); 
-    //     }
-    // }
-    //     fetchData();
-    // }, [id])
 
     async function fetchData(){
       try {
@@ -40,49 +30,49 @@ function ShowCard() {
 
     useEffect(()=>{
       fetchData();
-    },[])
+    },[id])
+
 
   async function fetchSeason(){
     try {
         const res = await getSeasonDataById(id);
-        console.log(res);
-        setSeasonData(res);
+        console.log(res.length);
+        if(res.length >= 1){
+          setSeasonData(res);
+        }
     } catch (error) {
       console.log(error);
     }
   }
+
   useEffect(()=>{
     fetchSeason();
-  },[])
-
+  },[id])
+// console.log(getSeasonDataById(56084));
 
   return (
     <div className="show-card-gp">
       <div className="show-card-p1">
           {(data.image)? <img className="stock-card-img" src = {data.image.medium} alt = "tv show pic"/> : "picture not avaialble"}
           <div className="show-card-seasons">
-
+            {/* displaying season data */}
             <h5> Seasons available: {seasonData.length}</h5>
-
-           
-              <Carousel> 
-              {(seasonData || []).map(ele=>{
-return (ele.image) ? <img src={ele.image.medium} alt="amari"/> : "Image not available"
-
-              })
+            {/* If Season data is not available, displaying default pic */}
+            { (seasonData)?
+              <div style={{width: "300px", marginTop :"10px"}}>
+                <Carousel> 
+                    {seasonData.map(ele=>{
+                    return (ele.image) ? <img className="carousel-img" src={ele.image.medium} alt=""/> : <img className="not-avail-img" src={pic_not_available} alt={pic_not_available} />
+                      })
+                    }
+                </Carousel> 
+              </div>
+            :
+             <div style={{width: "300px", marginTop :"10px"}}> I am here<img className="not-avail-img" src={pic_not_available} alt={pic_not_available} /></div>
             }
-
-  
-
-           </Carousel>
-          
-            {/* // /* // return <button>Season {ele.number}</button>
-            // // return <h4></h4>
-            // // <h5 className="h5-seasons">Season{ele.number}</h5> */}
-          
-         
           </div>
       </div>
+
       <div className="show-card-p2">
           <div className="show-card-c1">
               <h1>{data.name}</h1>
@@ -105,4 +95,29 @@ return (ele.image) ? <img src={ele.image.medium} alt="amari"/> : "Image not avai
 }
 
 export default ShowCard;
+
+
 // {data.genres[0]} {data.genres[1]}
+
+  
+            // {/* // /* // return <button>Season {ele.number}</button>
+            // // // return <h4></h4>
+            // // // <h5 className="h5-seasons">Season{ele.number}</h5> */}
+
+
+            
+    // useEffect(() =>{
+    //     const fetchData = async () =>{
+    //         try {
+    //             const res = await getTvShowDataById(tempId);
+    //             // console.log(res.data);
+    //             setData(res.data);
+    //         }
+    //      catch (error) {
+    //        console.log(error); 
+    //     }
+    // }
+    //     fetchData();
+    // }, [id])
+
+
