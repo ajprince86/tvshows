@@ -83,3 +83,11 @@ button:hover{
     color:rgb(238, 94, 23);
     font-weight:bold;
 }
+.carousel-img{
+    width: 180px;
+    height:240px;
+}
+.not-avail-img{
+    width: 200px;
+    height:240px;
+}
