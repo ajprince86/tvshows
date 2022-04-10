@@ -17,7 +17,9 @@ function Episodes() {
     fetchData();
   }, []);
 
-  return <h1>Hello All</h1>;
+  return;
+
+  <h1>Hello All</h1>;
 }
 
 export default Episodes;
