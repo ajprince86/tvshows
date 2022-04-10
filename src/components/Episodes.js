@@ -26,45 +26,61 @@ function Episodes() {
     fetchData();
   }, []);
 
+  // function handleMouseOver(e){
+  //   console.log(e.id)
+  //   console.log(episodeData)
+  //   const result = episodeData.filter((element)=> 
+  //   {//return element.id !== e.id})
+  //   if (element.id !== e.id){
+  //     return <p>{episodeData.summary}</p>
+  //   }
+  //     //setIsShown(true)
+  // })}
+
+
   return (
     <div>
-      <h1>Episodes</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Number</th>
-            <th>Date</th>
-            <th>Name</th>
-            <th>Rating</th>
-            <th>Summary</th>
-          </tr>
-        </thead>
-        <tbody>
-          {(episodeData || []).map((episode) => {
+
+    <h1>Episodes</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Number</th>
+          <th>Date</th>
+          <th>Name</th>
+          <th>Rating</th>
+          {/* <th>Summary</th> */}
+        </tr>
+      </thead>
+      <tbody>
+        {(episodeData||[]).map((episode)=>{
             return (
-              <tr id={episode.id}>
+              <tr id={ episode.id } >
+
                 <td>{episode.number}</td>
                 <td>{episode.airdate}</td>
                 <td>{episode.name}</td>
                 <td>{episode.rating.average}</td>
-                <td>{episode.summary}</td>
 
-                {/* <button
-                    id={episode.id}
-                    // onMouseEnter={() => setIsShown(true)}
-                    // onMouseLeave={() => setIsShown(false)}
-                  >
-                    summary
+                {/* <td>{episode.summary.slice(3,episode.summary.length-4)}</td> */}
+                {/* <td>
+                  <button id={ episode.id }
+                    onMouseEnter={(e) => handleMouseOver( episode )}
+                    // onMouseLeave={() => setIsShown(false)}>
+                      >
+                      summary
                   </button>
-                  {isShown && <p>{episode.summary}</p>}
-                </td> */}
+                  {(isShown)? <div>{episode.summary}</div> : null}
+                {/* { (toggle)? <div>{episode.summary}</div> : null} */}
               </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
-  );
+            )
+        }
+        )}
+    </tbody>
+  </table>
+  </div>
+    );
+
 }
 
 export default Episodes;

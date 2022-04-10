@@ -1,5 +1,5 @@
 const team = [
-      {
+      { 
       name: {
       title: "Ms.",
       first: "Ajitha",
