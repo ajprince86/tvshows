@@ -47,19 +47,17 @@ function Episodes() {
                 <td>{episode.airdate}</td>
                 <td>{episode.name}</td>
                 <td>{episode.rating.average}</td>
-                <td>
-                  <button
+                <td>{episode.summary}</td>
+
+                {/* <button
                     id={episode.id}
-                    onMouseEnter={() => setIsShown(true)}
-                    onMouseLeave={() => setIsShown(false)}
+                    // onMouseEnter={() => setIsShown(true)}
+                    // onMouseLeave={() => setIsShown(false)}
                   >
                     summary
                   </button>
-                  {isShown && (
-                    <div>I'll appear when you hover over the button.</div>
-                  )}
-                  {/* { (toggle)? <div>{episode.summary}</div> : null} */}
-                </td>
+                  {isShown && <p>{episode.summary}</p>}
+                </td> */}
               </tr>
             );
           })}
