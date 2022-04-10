@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Container from "./Container.js";
 import Footer from "./components/Footer";
+import TableList from "./components/TableList";
 
 function App() {
   return (
