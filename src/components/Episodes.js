@@ -47,49 +47,18 @@ function Episodes() {
             <th>Date</th>
             <th>Name</th>
             <th>Rating</th>
-            <th>Summary</th>
+            {/* <th>Summary</th> */}
           </tr>
         </thead>
         <tbody>
           {(episodeData || []).map((episode) => {
             return (
               <tr id={episode.id}>
-                <h1>Episodes</h1>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Number</th>
-                      <th>Date</th>
-                      <th>Name</th>
-                      <th>Rating</th>
-                      {/* <th>Summary</th> */}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {(episodeData || []).map((episode) => {
-                      return (
-                        <tr id={episode.id}>
-                          <td>{episode.number}</td>
-                          <td>{episode.airdate}</td>
-                          <td>{episode.name}</td>
-                          <td>{episode.rating.average}</td>
-                          <td>{episode.summary}</td>
+                <td>{episode.number}</td>
+                <td>{episode.airdate}</td>
+                <td>{episode.name}</td>
+                <td>{episode.rating.average}</td>
 
-                          {/* <button
-                    id={episode.id}
-                    // onMouseEnter={() => setIsShown(true)}
-                    // onMouseLeave={() => setIsShown(false)}
-                  >
-                    summary
-                  </button>
-                  {isShown && <p>{episode.summary}</p>}
-                </td> */}
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-                );
                 {/* <td>{episode.summary.slice(3,episode.summary.length-4)}</td> */}
                 {/* <td>
                   <button id={ episode.id }
