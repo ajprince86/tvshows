@@ -53,7 +53,8 @@ function ShowCard() {
   return (
     <div className="show-card-gp">
       <div className="show-card-p1">
-          {(data.image)? <img className="stock-card-img" src = {data.image.medium} alt = "tv show pic"/> : "picture not avaialble"}
+          {/* {(data.image)? <img className="stock-card-img" src = {data.image.medium} alt = "tv show pic"/> : "picture not avaialble"} */}
+          {(data.image)? <img className="stock-card-img" src = {data.image.medium} alt = "tv show pic"/> : <img src={pic_not_available} alt={pic_not_available} />}
           <div className="show-card-seasons">
             {/* displaying season data */}
             <h5> Seasons available: {seasonData.length}</h5>
