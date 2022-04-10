@@ -49,7 +49,7 @@ function Episodes() {
                 <td>{episode.name}</td>
                 <td>{episode.rating.average}</td>
                 <td>
-                  <button id={ episode.id }
+                   <button id={ episode.id }
                     onMouseEnter={() => setIsShown(true)}
                     onMouseLeave={() => setIsShown(false)}>summary
                   </button>
@@ -58,7 +58,7 @@ function Episodes() {
           I'll appear when you hover over the button.
         </div>
       )}
-                {/* { (toggle)? <div>{episode.summary}</div> : null} */}
+                {/* // { (toggle)? <div>{episode.summary}</div> : null}  */}
                 </td>
               </tr>
             )
