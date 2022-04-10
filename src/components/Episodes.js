@@ -5,14 +5,18 @@ import { getEpisodeDataById } from "../services/constants";
 function Episodes() {
   const [episodeData, setEpisodeData] = useState([]);
   const { id } = useParams();
-  const [toggle, setToggle] = useState(false)
+  //const [toggle, setToggle] = useState(false)
 
   // console.log(id);
   // console.log(episodeData);
 
-  const handleOnClick = () =>{
-    setToggle(prevState => !prevState)
-  }
+  // const handleOnClick = (index) =>{
+  //   if (index + 1 == episodeData){
+  //     setToggle(prevState => !prevState)}
+  // }
+
+  const [isShown, setIsShown] = useState(false);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,21 +41,33 @@ function Episodes() {
         </tr>
       </thead>
       <tbody>
-        {(episodeData||[]).map((episode,index)=>{
+        {(episodeData||[]).map((episode)=>{
             return (
-              <tr>
+              <tr id={ episode.id }>
                 <td>{episode.number}</td>
                 <td>{episode.airdate}</td>
                 <td>{episode.name}</td>
                 <td>{episode.rating.average}</td>
-                <td><button onClick={handleOnClick}>summary
-                { (toggle)? <div>{episode.summary}</div> : null}
-                </button>
-                
+                <td>
+                  <button id={ episode.id }
+                    onMouseEnter={() => setIsShown(true)}
+                    onMouseLeave={() => setIsShown(false)}>summary
+                  </button>
+                  {isShown && (
+        <div>
+          I'll appear when you hover over the button.
+        </div>
+      )}
+                {/* { (toggle)? <div>{episode.summary}</div> : null} */}
                 </td>
               </tr>
             )
-        })}
+        }
+        
+        
+        
+        )}
+        
      
     </tbody>
   </table>
