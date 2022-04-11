@@ -16,8 +16,6 @@ function ShowCard() {
 
   const navigate = useNavigate();
 
-  // const tempId = parseInt(id);
-  // console.log(id);
 
   async function fetchData() {
     try {
@@ -32,6 +30,7 @@ function ShowCard() {
     fetchData();
   }, [id]);
 
+//async-call to get seasons data 
   async function fetchSeason() {
     try {
       const res = await getSeasonDataById(id);
@@ -47,10 +46,10 @@ function ShowCard() {
   useEffect(() => {
     fetchSeason();
   }, [id]);
-  // console.log(getSeasonDataById(56084));
+ 
 
   return (
-    <div className="show-card-gp">
+    <div className="show-card-gp" >
       <div className="show-card-p1">
         {data.image ? (
           <img
@@ -59,14 +58,18 @@ function ShowCard() {
             alt="tv show pic"
           />
         ) : (
-          "picture not avaialble"
+          <img
+                className="not-avail-img-sc"
+                src={pic_not_available}
+                alt={pic_not_available}
+              />
         )}
         <div className="show-card-seasons">
           {/* displaying season data */}
-          <h5> Seasons available: {seasonData.length}</h5>
+          {/* <h5> Seasons available: {seasonData.length}</h5> */}
           {/* If Season data is not available, displaying default pic */}
           {seasonData ? (
-            <div style={{ width: "300px", marginTop: "10px" }}>
+            <div className = "carousel-div">
               <Carousel>
                 {seasonData.map((ele) => {
                   return ele.image ? (
@@ -79,7 +82,7 @@ function ShowCard() {
                     />
                   ) : (
                     <img
-                      className="not-avail-img"
+                      className="not-avail-img-sc"
                       src={pic_not_available}
                       alt={pic_not_available}
                       id={ele.number}
@@ -94,7 +97,7 @@ function ShowCard() {
               {" "}
               I am here
               <img
-                className="not-avail-img"
+                className="not-avail-img-sc"
                 src={pic_not_available}
                 alt={pic_not_available}
               />
@@ -130,6 +133,10 @@ function ShowCard() {
             <h5>
               <span>Network Country Name: </span>
               {data.network ? data.network.country.name : "data not available"}
+            </h5>
+            <h5> 
+              <span>Seasons available:</span> 
+              {seasonData.length}
             </h5>
           </div>
           <div>

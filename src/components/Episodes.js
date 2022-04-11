@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getEpisodeDataById } from "../services/constants";
+import '../styles/episodes.css'
 
 function Episodes() {
   const [episodeData, setEpisodeData] = useState([]);
@@ -39,8 +40,8 @@ function Episodes() {
 
 
   return (
-    <div>
-    <h1>Episodes</h1>
+    <div className="episodes-div">
+    <h1 className="episodes-h1">Episodes</h1>
     <table>
       <thead>
         <tr>

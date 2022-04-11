@@ -44,14 +44,16 @@ function Search(){
             })
          )
             }
-
+//&#x1F50E;&#xFE0E;(new)
+//&#x1F50D;(used)
+//&#128269;(right)
     return(
         <div>
             {/* <h1>Search page</h1> */}
             <div className="search-p">
                 <div className="search-txt-btn">
                 <input className = "input-search" type="text" onChange={(e) =>{handleOnChange(e)}}/>
-                <button className = "btn-search" onClick={(e) => handleOnClick(e)}>&#x1F50D; Search Show</button>
+                <button className = "btn-search" onClick={(e) => handleOnClick(e)}>&#128269; Search Show</button>
                 </div>
                 <div className="search-result">{renderPost()}</div>
                 {/* {console.log(queryLog)} */}

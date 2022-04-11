@@ -17,6 +17,7 @@ nav a{
     font-size: xx-large;
     padding: 20px;
     text-decoration: none;
+    margin-right: 50px;
 }
 nav a:hover{
     text-decoration: underline;
