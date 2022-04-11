@@ -71,16 +71,22 @@ function ShowCard() {
           {seasonData ? (
             <div className = "carousel-div">
               <Carousel>
-                {seasonData.map((ele) => {
+                {seasonData.map((ele,index) => {
                   return ele.image ? (
-                    <img
+                    <div>
+                      <p style = {{color: "yellow"}}>Season: {index + 1}</p>
+                      <img
                       className="carousel-img"
                       src={ele.image.medium}
                       alt=""
                       id={ele.number}
                       onClick={() => navigate(`/episodes/${ele.id}`)}
                     />
+                    
+                    </div>
                   ) : (
+                    <div>
+                      <p style = {{color: "yellow"}}>Season: {index + 1}</p>
                     <img
                       className="not-avail-img-sc"
                       src={pic_not_available}
@@ -88,6 +94,7 @@ function ShowCard() {
                       id={ele.number}
                       onClick={() => navigate(`/episodes/${ele.id}`)}
                     />
+                    </div>
                   );
                 })}
               </Carousel>
