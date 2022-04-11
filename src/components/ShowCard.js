@@ -136,7 +136,7 @@ function ShowCard() {
             <h5>
               <span>Summary: </span>
               {data.summary ? (
-                <h5 id="sum-id">{JSON.stringify(data.summary)}</h5>
+                <h5 id="sum-id">{JSON.stringify((data.summary).replace(/<[^>]+>/g,""))}</h5>
               ) : (
                 "data is not available"
               )}

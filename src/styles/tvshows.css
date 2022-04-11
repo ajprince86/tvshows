@@ -1,8 +1,29 @@
 .TvShows-gp{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center  */
+
+    display: block;
+    margin-top: 15px;
+    margin-left: 30px;
+ 
 }
 .TvShows-p:hover{
     cursor: pointer;
+}
+/* .stock-card-img{
+    height: 450px;
+    width: 325px; 
+}
+.stock-card-img:hover{
+   opacity: 5;
+   border-color: rgb(255, 225, 0);
+}
+.not-avail-img{
+    height: 450px;
+    width: 325px; 
+} */
+.not-avail-img{
+    width: 230px; 
+    height: 320px; 
 }

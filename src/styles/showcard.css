@@ -65,16 +65,21 @@ h5{
 }
 .stock-card-img{
     border-radius: .2em; 
-    height: 450px;
-    width: 325px; 
+    width: 230px; 
+    height: 320px;
     align-self: center;
+    margin:20px;
 }
 .stock-card-img:hover{
-    height: 466px;
-    width: 338px;
+    width: 235px;
+    height:325px;
     border-radius: .2em;
-    box-shadow: 2px 0px 2px 0px gray;
+    box-shadow: 2px 0px 2px 0px gray;  
     
+}
+.not-avail-img{
+    width: 230px; 
+    height: 320px; 
 }
 button:hover{
     width:160px;
@@ -88,6 +93,8 @@ button:hover{
     height:240px;
 }
 .not-avail-img{
-    width: 200px;
-    height:240px;
+    width: 230px;
+    height:320px;
+    margin:20px;
+    border-radius: .2em; 
 }

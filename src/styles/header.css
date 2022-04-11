@@ -1,0 +1,24 @@
+.header-div{
+    display: flex;
+    align-items: flex-end;
+
+}
+.header-div h1{
+    color: rgb(255, 225, 0);
+    font-size: 50px;
+    margin-left: 20px;
+    margin-top:5px;
+}
+nav{
+    flex-grow: 3;
+}
+nav a{
+    color: rgb(255, 225, 0); 
+    font-size: xx-large;
+    padding: 20px;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+    font-size: 35px;
+}
