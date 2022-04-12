@@ -45,7 +45,7 @@ function Episodes() {
       <table>
         <thead>
           <tr>
-            <th>Season</th>
+            <th>Episode</th>
             <th>Date</th>
             <th>Name</th>
             <th>Rating</th>
