@@ -7,10 +7,10 @@ import TableList from "./components/TableList";
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to the Tv Show Site</h1>
-      <Header />
-      <Container />
-      <Footer />
+      {/* <h1>Welcome to the Tv Show Site</h1> */}
+      <div><Header /></div>
+      <div><Container /></div>
+      <div><Footer /></div>
     </div>
   );
 }
