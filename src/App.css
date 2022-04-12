@@ -1,6 +1,15 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 20fr .5fr;
 }
+
+.footer-h5{
+  color: #ffe100;
+  /* position: sticky; */
+}
+
 
 .App-logo {
   height: 40vmin;

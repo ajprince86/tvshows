@@ -16,8 +16,6 @@ function ShowCard() {
 
   const navigate = useNavigate();
 
-  // const tempId = parseInt(id);
-  // console.log(id);
 
   async function fetchData() {
     try {
@@ -32,6 +30,7 @@ function ShowCard() {
     fetchData();
   }, [id]);
 
+//async-call to get seasons data 
   async function fetchSeason() {
     try {
       const res = await getSeasonDataById(id);
@@ -47,10 +46,10 @@ function ShowCard() {
   useEffect(() => {
     fetchSeason();
   }, [id]);
-  // console.log(getSeasonDataById(56084));
+ 
 
   return (
-    <div className="show-card-gp">
+    <div className="show-card-gp" >
       <div className="show-card-p1">
         {data.image ? (
           <img
@@ -59,32 +58,43 @@ function ShowCard() {
             alt="tv show pic"
           />
         ) : (
-          "picture not avaialble"
+          <img
+                className="not-avail-img-sc"
+                src={pic_not_available}
+                alt={pic_not_available}
+              />
         )}
         <div className="show-card-seasons">
           {/* displaying season data */}
-          <h5> Seasons available: {seasonData.length}</h5>
+          {/* <h5> Seasons available: {seasonData.length}</h5> */}
           {/* If Season data is not available, displaying default pic */}
           {seasonData ? (
-            <div style={{ width: "300px", marginTop: "10px" }}>
+            <div className = "carousel-div">
               <Carousel>
-                {seasonData.map((ele) => {
+                {seasonData.map((ele,index) => {
                   return ele.image ? (
-                    <img
+                    <div>
+                      <p style = {{color: "yellow"}}>Season: {index + 1}</p>
+                      <img
                       className="carousel-img"
                       src={ele.image.medium}
                       alt=""
                       id={ele.number}
                       onClick={() => navigate(`/episodes/${ele.id}`)}
                     />
+                    
+                    </div>
                   ) : (
+                    <div>
+                      <p style = {{color: "yellow"}}>Season: {index + 1}</p>
                     <img
-                      className="not-avail-img"
+                      className="not-avail-img-sc"
                       src={pic_not_available}
                       alt={pic_not_available}
                       id={ele.number}
                       onClick={() => navigate(`/episodes/${ele.id}`)}
                     />
+                    </div>
                   );
                 })}
               </Carousel>
@@ -94,7 +104,7 @@ function ShowCard() {
               {" "}
               I am here
               <img
-                className="not-avail-img"
+                className="not-avail-img-sc"
                 src={pic_not_available}
                 alt={pic_not_available}
               />
@@ -131,12 +141,16 @@ function ShowCard() {
               <span>Network Country Name: </span>
               {data.network ? data.network.country.name : "data not available"}
             </h5>
+            <h5> 
+              <span>Seasons available:</span> 
+              {seasonData.length}
+            </h5>
           </div>
           <div>
             <h5>
               <span>Summary: </span>
               {data.summary ? (
-                <h5 id="sum-id">{JSON.stringify(data.summary)}</h5>
+                <h5 id="sum-id">{JSON.stringify((data.summary).replace(/<[^>]+>/g,""))}</h5>
               ) : (
                 "data is not available"
               )}
