@@ -52,10 +52,10 @@ function Episodes() {
           </tr>
         </thead>
         <tbody>
-          {(episodeData || []).map((episode) => {
+          {(episodeData || []).map((episode, index) => {
             return (
               <tr id={episode.id}>
-                <td>{episode.number}</td>
+                <td>{index + 1}</td>
                 <td>{episode.airdate}</td>
                 <td>{episode.name}</td>
                 <td>{episode.rating.average}</td>

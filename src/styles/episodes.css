@@ -1,46 +1,45 @@
-.episodes-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.episodes-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.episodes-h1{
-    margin-top: 40px;
-    text-decoration: underline;
+.episodes-h1 {
+  margin-top: 40px;
+  text-decoration: underline;
 }
-table{
-    margin-top: 30px;
-    border: 1px solid whitesmoke;
+table {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border: 1px solid whitesmoke;
 }
-tbody tr{
-    line-height: 2em;
+tbody tr {
+  line-height: 2em;
 }
 /* thead{
     background-color: whitesmoke;
 } */
-thead th{
-    width: 25%;
-    background-color: rgb(255, 225, 0);
-    color: rgb(82, 33, 82);
-    font-size: larger; 
+thead th {
+  width: 25%;
+  background-color: rgb(255, 225, 0);
+  color: rgb(82, 33, 82);
+  font-size: larger;
 }
-th, td{
-    padding: 8px;
-    /* border: 1px solid whitesmoke; */
+th,
+td {
+  padding: 8px;
+  /* border: 1px solid whitesmoke; */
 }
 
-tr td{
-    color:rgb(255, 225, 0);
-    /* background-color: whitesmoke; */
+tr td {
+  color: rgb(255, 225, 0);
+  /* background-color: whitesmoke; */
 }
 
 /* tbody tr:nth-child(odd){
     background-color: white;
 } */
-  
-  /* tbody tr:nth-child(even) {
+
+/* tbody tr:nth-child(even) {
     /* background-color: #eee; }*/
-  
-
-
