@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getEpisodeDataById } from "../services/constants";
+import "../styles/episodes.css";
 
 function Episodes() {
   const [episodeData, setEpisodeData] = useState([]);
@@ -29,7 +30,7 @@ function Episodes() {
   // function handleMouseOver(e){
   //   console.log(e.id)
   //   console.log(episodeData)
-  //   const result = episodeData.filter((element)=> 
+  //   const result = episodeData.filter((element)=>
   //   {//return element.id !== e.id})
   //   if (element.id !== e.id){
   //     return <p>{episodeData.summary}</p>
@@ -37,28 +38,29 @@ function Episodes() {
   //     //setIsShown(true)
   // })}
 
-
   return (
-    <div>
-    <h1>Episodes</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Season</th>
-          <th>Date</th>
-          <th>Name</th>
-          <th>Rating</th>
-          {/* <th>Summary</th> */}
-        </tr>fir 
-      </thead>
-      <tbody>
-        {(episodeData||[]).map((episode)=>{
+
+    <div className="episodes-div">
+      <h1 className="episodes-h1">Episodes</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Rating</th>
+            {/* <th>Summary</th> */}
+          </tr>
+        </thead>
+        <tbody>
+          {(episodeData || []).map((episode) => {
             return (
-              <tr id={ episode.id } >
+              <tr id={episode.id}>
                 <td>{episode.number}</td>
                 <td>{episode.airdate}</td>
                 <td>{episode.name}</td>
                 <td>{episode.rating.average}</td>
+
                 {/* <td>{episode.summary.slice(3,episode.summary.length-4)}</td> */}
                 {/* <td>
                   <button id={ episode.id }
@@ -70,13 +72,12 @@ function Episodes() {
                   {(isShown)? <div>{episode.summary}</div> : null}
                 {/* { (toggle)? <div>{episode.summary}</div> : null} */}
               </tr>
-            )
-        }
-        )}
-    </tbody>
-  </table>
-  </div>
-    );
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
 export default Episodes;
