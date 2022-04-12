@@ -56,10 +56,12 @@ function Episodes() {
         {(episodeData||[]).map((episode)=>{
             return (
               <tr id={ episode.id } >
+
                 <td>{episode.number}</td>
                 <td>{episode.airdate}</td>
                 <td>{episode.name}</td>
                 <td>{episode.rating.average}</td>
+
                 {/* <td>{episode.summary.slice(3,episode.summary.length-4)}</td> */}
                 {/* <td>
                   <button id={ episode.id }
@@ -78,6 +80,7 @@ function Episodes() {
   </table>
   </div>
     );
+
 }
 
 export default Episodes;
