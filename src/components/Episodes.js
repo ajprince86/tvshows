@@ -49,7 +49,7 @@ function Episodes() {
           <th>Name</th>
           <th>Rating</th>
           {/* <th>Summary</th> */}
-        </tr>
+        </tr>fir 
       </thead>
       <tbody>
         {(episodeData||[]).map((episode)=>{
