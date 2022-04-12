@@ -39,12 +39,13 @@ function Episodes() {
   // })}
 
   return (
+
     <div className="episodes-div">
       <h1 className="episodes-h1">Episodes</h1>
       <table>
         <thead>
           <tr>
-            <th>Number</th>
+            <th>Episode</th>
             <th>Date</th>
             <th>Name</th>
             <th>Rating</th>
