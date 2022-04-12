@@ -27,19 +27,7 @@ function Episodes() {
     fetchData();
   }, []);
 
-  // function handleMouseOver(e){
-  //   console.log(e.id)
-  //   console.log(episodeData)
-  //   const result = episodeData.filter((element)=>
-  //   {//return element.id !== e.id})
-  //   if (element.id !== e.id){
-  //     return <p>{episodeData.summary}</p>
-  //   }
-  //     //setIsShown(true)
-  // })}
-
   return (
-
     <div className="episodes-div">
       <h1 className="episodes-h1">Episodes</h1>
       <table>

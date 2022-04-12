@@ -13,11 +13,16 @@
 .show {
   margin-top: 50px;
 }
-.home-img{
+.home-img {
   width: 220px;
-  height:300px;
+  height: 300px;
 }
-.home-img:hover{
+.home-img:hover {
   width: 230px;
-  height:310px;
+  height: 310px;
+}
+
+.home-color {
+  margin-top: 50px;
+  color: rgb(255, 225, 0);
 }

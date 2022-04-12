@@ -46,10 +46,90 @@ export async function getEpisodeDataById(id) {
 }
 
 export const favoriteLists = [
-  "https://static.tvmaze.com/uploads/images/medium_portrait/28/72341.jpg",
-  "https://static.tvmaze.com/uploads/images/medium_portrait/4/11322.jpg",
-  "https://static.tvmaze.com/uploads/images/medium_portrait/359/898433.jpg",
-  "https://static.tvmaze.com/uploads/images/medium_portrait/402/1006397.jpg",
-  "https://static.tvmaze.com/uploads/images/medium_portrait/362/906711.jpg",
-  "https://static.tvmaze.com/uploads/images/medium_portrait/145/363769.jpg",
+  {
+    id: 7903,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/28/72341.jpg",
+  },
+
+  {
+    id: 526,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/4/11322.jpg",
+  },
+
+  {
+    id: 83,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/359/898433.jpg",
+  },
+
+  {
+    id: 84,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/402/1006397.jpg",
+  },
+
+  {
+    id: 43687,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/362/906711.jpg",
+  },
+
+  {
+    id: 161,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/145/363769.jpg",
+  },
 ];
+
+export const upcomingShows = [
+  {
+    id: 48090,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/394/986248.jpg",
+  },
+  {
+    id: 52260,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/395/988970.jpg",
+  },
+  {
+    id: 46273,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/400/1001018.jpg",
+  },
+  {
+    id: 33352,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/394/986215.jpg",
+  },
+  {
+    id: 44778,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/396/991595.jpg",
+  },
+  {
+    id: 42842,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/277/693469.jpg",
+  },
+  {
+    id: 42827,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/360/901551.jpg",
+  },
+  {
+    id: 49334,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/398/996391.jpg",
+  },
+  {
+    id: 47856,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/262/656107.jpg",
+  },
+  {
+    id: 43519,
+    img: "https://static.tvmaze.com/uploads/images/medium_portrait/399/999587.jpg",
+  },
+];
+
+//Star Trek: Strange New Worlds 48090
+//Obi-Wan Kenobi 52260
+//Resident Evil 46273
+//The Lord of the Rings: The Rings of Power 33352
+//House of the Dragon 44778
+//Gremlins 42842
+//The Sandman 42827
+//Shining Girls 49334
+//The Terminal List 47856
+//Ms. Marvel 43519
+
+//If the show has no image we should have the name show up below
+//example is when you search dexter
