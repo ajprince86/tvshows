@@ -1,3 +1,5 @@
+import '../styles/about.css'
+
 function Team (props) {
     // Destructuring
 
@@ -13,17 +15,16 @@ function Team (props) {
    //const {first, title, last } = name
   
     return (
-        <>
-        <h1> Team Mate</h1>
-        <p>name: {name.title} {name.first} {name.last} </p>
-        <p>location: {location}</p>
-        <p>email: {email}</p>
-        <p>cell: {cell}</p>
-        <p> github: {github}</p>
-        <p> linkedin: {linkedin}</p>
-        <p> introduction: {introduction}</p>
-
-        </>
+        <div className="team-div">
+          {/* <h1> Team Mate</h1> */}
+            <p className='team-p-name'>{name.title} {name.first} {name.last} </p>
+            <p>{location}</p>
+            <p>{email}</p>
+            <p>{cell}</p>
+            <p>{github}</p>
+            <p>{linkedin}</p>
+            <p>{introduction}</p>
+        </div>
     )
 }
 

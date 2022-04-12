@@ -1,0 +1,29 @@
+
+.about-h1{
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-decoration: underline;
+    color: rgb(255, 225, 0);
+}
+.aboutus-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.team-div{
+    border: 1px solid rgb(255, 225, 0);
+    border-radius: .5em;
+    /* display: grid; */
+    margin:20px; 
+    color: whitesmoke;  
+}
+.team-div p{
+    margin:10px;
+}
+.team-p-name{
+    font-size: x-large;
+    text-decoration: underline;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
