@@ -8,6 +8,8 @@ function Home() {
   const navigate = useNavigate();
 
   console.log(favoriteLists);
+
+ 
   return (
     <div className="container">
       {favoriteLists.map((show, key) => {
@@ -26,7 +28,7 @@ function Home() {
       })}
       <h2 className="home-color">Upcoming Shows</h2>
 
-      <Carousel>
+      <Carousel >
         {upcomingShows.map((show, key) => {
           return (
             <img

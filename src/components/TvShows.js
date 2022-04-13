@@ -10,11 +10,16 @@ function TvShows({ data }) {
         <div className = "TvShows-p" onClick={() => navigate(`/search/${data.show.id}`)}>
         {/* <h1>{data.show.name}</h1> */}
         {(data.show.image !== null)? <img className="tv-show-img" src = {data.show.image.medium} alt= "TvShow pic"/> : 
-            <img
+            <div className='no-image-div'>
+              <h2 className='h2-no-img'>{data.show.name}</h2>
+              {/* <p>NO IMAGE AVAILABLE</p> */}
+              <img
                 className="tv-not-avail-img"
                 src={pic_not_available}
                 alt={pic_not_available}
-              />}
+              /> 
+              </div>
+            }
         </div>
     </div>
   )

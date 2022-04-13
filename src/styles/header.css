@@ -15,9 +15,10 @@ nav{
 nav a{
     color: rgb(255, 225, 0); 
     font-size: xx-large;
-    padding: 20px;
+    padding: 60px;
     text-decoration: none;
     margin-right: 50px;
+   
 }
 nav a:hover{
     text-decoration: underline;

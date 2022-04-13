@@ -45,9 +45,12 @@ function Episodes() {
             return (
               <tr id={episode.id}>
                 <td>{index + 1}</td>
-                <td>{episode.airdate}</td>
+                {/* <td>{episode.airdate}</td> */}
+                <td>{new Date(episode.airdate).toLocaleDateString()}</td>
                 <td>{episode.name}</td>
-                <td>{episode.rating.average}</td>
+                <td>{(episode.rating.average)? episode.rating.average : "N/A"}
+                
+                </td>
 
                 {/* <td>{episode.summary.slice(3,episode.summary.length-4)}</td> */}
                 {/* <td>
