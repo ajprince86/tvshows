@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 
 function Container() {
   return (
-    <div>
+    <div className="happy">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search/*" element={<Search />} />

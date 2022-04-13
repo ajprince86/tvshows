@@ -18,6 +18,7 @@
   height: 300px;
 }
 .home-img:hover {
+  cursor: pointer;
   width: 230px;
   height: 310px;
 }
@@ -25,4 +26,16 @@
 .home-color {
   margin-top: 50px;
   color: rgb(255, 225, 0);
+}
+
+.home-carousel {
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.container-p {
+  width: 100%;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
 }
