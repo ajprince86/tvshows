@@ -27,19 +27,7 @@ function Episodes() {
     fetchData();
   }, []);
 
-  // function handleMouseOver(e){
-  //   console.log(e.id)
-  //   console.log(episodeData)
-  //   const result = episodeData.filter((element)=>
-  //   {//return element.id !== e.id})
-  //   if (element.id !== e.id){
-  //     return <p>{episodeData.summary}</p>
-  //   }
-  //     //setIsShown(true)
-  // })}
-
   return (
-
     <div className="episodes-div">
       <h1 className="episodes-h1">Episodes</h1>
       <table>
@@ -53,10 +41,10 @@ function Episodes() {
           </tr>
         </thead>
         <tbody>
-          {(episodeData || []).map((episode) => {
+          {(episodeData || []).map((episode, index) => {
             return (
               <tr id={episode.id}>
-                <td>{episode.number}</td>
+                <td>{index + 1}</td>
                 <td>{episode.airdate}</td>
                 <td>{episode.name}</td>
                 <td>{episode.rating.average}</td>
