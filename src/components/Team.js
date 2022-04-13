@@ -22,15 +22,11 @@ function Team (props) {
         <div className="team-div">
           {/* <h1> Team Mate</h1> */}
             <p className='team-p-name'>{name.title} {name.first} {name.last} </p>
-            <p><GoLocation />: {location}</p>
+
             <p><AiOutlineMail />: {email}</p>
-            <p><BsFillPhoneVibrateFill /> :{cell}</p>
-            <p>< FaGithub />: {github}</p>
-            <p>< FaLinkedin />: {linkedin}</p>
+            <p> </p>
+            <p className='about'><a href={github} >< FaGithub /></a> <a href={linkedin} >< FaLinkedin /></a></p>
             <p><FaParagraph />: {introduction}</p>
-            <div className= "footer-github-link">
-            <p>< FaGithub />: {github}</p>
-            </div>
         </div>
         
     )
