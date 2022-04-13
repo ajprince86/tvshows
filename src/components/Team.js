@@ -1,4 +1,8 @@
-import '../styles/about.css'
+import '../styles/about.css';
+import { FaGithub, FaLinkedin, FaParagraph } from 'react-icons/fa';
+import { AiOutlineMail } from "react-icons/ai";
+import { GoLocation} from "react-icons/go";
+import { BsFillPhoneVibrateFill } from "react-icons/bs";
 
 function Team (props) {
     // Destructuring
@@ -18,13 +22,13 @@ function Team (props) {
         <div className="team-div">
           {/* <h1> Team Mate</h1> */}
             <p className='team-p-name'>{name.title} {name.first} {name.last} </p>
-            <p>{location}</p>
-            <p>{email}</p>
-            <p>{cell}</p>
-            <p>{github}</p>
-            <p>{linkedin}</p>
-            <p>{introduction}</p>
+
+            <p><AiOutlineMail />: {email}</p>
+            <p> </p>
+            <p className='about'><a href={github} >< FaGithub /></a> <a href={linkedin} >< FaLinkedin /></a></p>
+            <p><FaParagraph />: {introduction}</p>
         </div>
+        
     )
 }
 
