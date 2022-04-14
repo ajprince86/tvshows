@@ -7,7 +7,7 @@ function TvShows({ data }) {
   const navigate = useNavigate()
   return (
     <div className = "TvShows-gp">
-        <div className = "TvShows-p" onClick={() => navigate(`/search/${data.show.id}`)}>
+        <div className = "TvShows-p" onClick={() => navigate(`/search/show/${data.show.id}`)}>
         {/* <h1>{data.show.name}</h1> */}
         {(data.show.image !== null)? <img className="tv-show-img" src = {data.show.image.medium} alt= "TvShow pic"/> : 
             <div className='no-image-div'>
