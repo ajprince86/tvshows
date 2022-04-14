@@ -7,6 +7,7 @@ const CLIENT_URL3 = "https://api.tvmaze.com/seasons/";
 export async function getTvShowData(input) {
   try {
     //making api call
+    console.log(input);
     const response1 = await axios.get(`${CLIENT_URL1}${input}`);
     console.log(response1.data);
     return response1.data;

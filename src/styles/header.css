@@ -1,25 +1,52 @@
 .header-div{
     display: flex;
-    align-items: flex-end;
-
+    align-items: flex-end;  
 }
-.header-div h1{
+.h1-header{
     color: rgb(255, 225, 0);
     font-size: 50px;
     margin-left: 20px;
-    margin-top:5px;
+    margin-top:10px;
 }
-nav{
+.h1-header:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*old-working code
+/* nav{
     flex-grow: 3;
-}
-nav a{
+    /* border: 1px solid red; */
+    /* height: 80px; */
+    /* margin-left:850px; */
+    /* display: flex; */
+    /* align-content: right; */
+/* } */
+/* nav a{
     color: rgb(255, 225, 0); 
-    font-size: xx-large;
-    padding: 20px;
-    text-decoration: none;
-    margin-right: 50px;
-}
-nav a:hover{
+    font-size: xx-large; */
+    /* padding: 60px; */
+    /* padding: 20px;
+    
+    text-decoration: none; 
+} */
+/* nav a:hover{
     text-decoration: underline;
     font-size: 35px;
-}
+} */

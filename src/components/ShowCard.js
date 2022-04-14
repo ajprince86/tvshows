@@ -8,6 +8,7 @@ import "../styles/showcard.css";
 import Carousel from "react-elastic-carousel";
 import pic_not_available from "../images/pic_not_available.jpg";
 
+
 function ShowCard() {
   const [data, setData] = useState([]);
   const { id } = useParams();
@@ -135,7 +136,9 @@ function ShowCard() {
             </h5>
             <h5>
               <span>Premiered on: </span>
-              {data.premiered}
+              {/* {data.premiered} */}
+              {/* {new Date(dateobject ).toLocaleDateString()} --- for notes*/}
+              {new Date(data.premiered).toLocaleDateString()}
             </h5>
             <h5>
               <span>Network Country Name: </span>
