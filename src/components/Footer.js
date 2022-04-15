@@ -1,5 +1,9 @@
-import React from 'react'
+
+import React from 'react';
 import { FaGithub } from 'react-icons/fa';
+
+
+
 function Footer() {
   return (
     <div>

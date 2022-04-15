@@ -2,11 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
 import "./home.css";
-import {
-  favoriteLists,
-  upcomingShows,
-  scolling_movie,
-} from "../services/constants.js";
+
+import { favoriteLists, upcomingShows, scolling_movie } from "../services/constants.js";
 import StaffPicks from "../components/StaffPicks";
 import Romance from "../components/Romance";
 import Action from "../components/Action";
@@ -63,16 +60,7 @@ function Home() {
         </Carousel>
       </div>
 
-      <div className = "container-scoller-box">
-        <div className = "scolling-img" >
-          {scolling_movie.map((movie, key) => {
-              return (
-              <img 
-             
-              src={movie.img} />
-              )})}
-        </div>
-      </div>
+
 
       {/* <img src={obi_wan_kenobi_main} width="70%" alt="obi_wan" />
       <img src={star_trek} width="70%" height="500px" alt="star_trek" />
@@ -89,12 +77,17 @@ function Home() {
       <Action />
       <Hero />
       <Classic />
-      <div className="container-scoller-box">
-        <div className="scolling-img">
-          {scolling_movie.map((movie, key) => {
-            return <img style={{ width: "190px" }} src={movie.img} />;
-          })}
-        </div>
+
+      <div className = "container-scoller-box">
+      <div className = "scolling-img" >
+      {scolling_movie.map((movie, key) => {
+            return (
+              <img 
+              style= {{width: "250px"}}
+              src={movie.img} />
+            )})}
+      </div>
+
       </div>
     </div>
   );

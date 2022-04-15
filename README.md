@@ -4,9 +4,12 @@
 TV HUB is a web app for people who feel more at home looking up into the TV shows. With the newly redesigned TV HUB app, use the interactive and intuitive interface to easily search and browse through a collection of TV shows.
 
 # TV HUB team:
-Ajitha, Amari, Bosen
+<ul> Ajitha
+<ul> Amari
+<ul> Bosen
 
 <br />
+
 
 # Structure of our app
 
@@ -18,3 +21,4 @@ Ajitha, Amari, Bosen
 <ul> React </ul>
 <ul> Axios </ul>
 <ul> Router </ul>
+
