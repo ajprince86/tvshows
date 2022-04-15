@@ -2,13 +2,18 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
 import "./home.css";
-import { favoriteLists, upcomingShows, scolling_movie } from "../services/constants.js";
+import {
+  favoriteLists,
+  upcomingShows,
+  scolling_movie,
+} from "../services/constants.js";
 import StaffPicks from "../components/StaffPicks";
 import Romance from "../components/Romance";
 import Action from "../components/Action";
 import Classic from "../components/Classic";
+import Hero from "../components/Hero";
 import bgImage from "../videos/website-video.mp4";
-import "./home.scss"
+import "./home.scss";
 
 function Home() {
   const navigate = useNavigate();
@@ -28,16 +33,18 @@ function Home() {
   // ];
   return (
     <div className="container-p">
-      <div>
+      <div className="video-text-container">
+        <h1>WELCOME TO TVHUB - where fun begins!</h1>
+      </div>
+      <div className="video-div">
         <video className="video-home" autoPlay loop muted>
           <source src={bgImage} type="video/mp4" />
         </video>
-        <div className="video-text-container">
-          <h1>WELCOME TO TVHUB-where fun begins!</h1>
-        </div>
       </div>
       <div>
-        <h2 className="home-color">Soon To be released!!</h2>
+        <h2 style={{ color: "red" }} className="home-color">
+          Soon To be released!!
+        </h2>
         <Carousel>
           {upcomingShows.map((show, key) => {
             return (
@@ -55,6 +62,7 @@ function Home() {
           })}
         </Carousel>
       </div>
+
       <div className = "container-scoller-box">
         <div className = "scolling-img" >
           {scolling_movie.map((movie, key) => {
@@ -65,6 +73,7 @@ function Home() {
               )})}
         </div>
       </div>
+
       {/* <img src={obi_wan_kenobi_main} width="70%" alt="obi_wan" />
       <img src={star_trek} width="70%" height="500px" alt="star_trek" />
       <img src={resident_evil} width="70%" height="500px" alt="resident_evil" />
@@ -78,7 +87,15 @@ function Home() {
       <StaffPicks />
       <Romance />
       <Action />
+      <Hero />
       <Classic />
+      <div className="container-scoller-box">
+        <div className="scolling-img">
+          {scolling_movie.map((movie, key) => {
+            return <img style={{ width: "190px" }} src={movie.img} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 }
