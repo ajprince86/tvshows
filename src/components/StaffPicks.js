@@ -7,7 +7,7 @@ const StaffPicks = () => {
   return (
     <div>
       <h2 className="h2-staffPicks">
-        Our <span className="span-r">MUST</span> watch list
+        Our <h4 style={{color: "red",marginLeft:"5px", marginRight: "5px"}}>MUST</h4> watch list
       </h2>
       <div className="container-staffpicks">
         {favoriteLists.map((show, key) => {

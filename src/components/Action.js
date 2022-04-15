@@ -6,7 +6,7 @@ const Action = () => {
   return (
     <div>
       <h2 className="h2-staffPicks">
-        Time for some <span className="span-r">ACTION</span>
+        Time for some <h4 style={{color: "red",marginLeft:"5px", marginRight: "5px"}}>ACTION</h4>
       </h2>
       <div className="container-staffpicks">
         {action.map((show, key) => {

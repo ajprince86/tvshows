@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div>
       <h2 className="h2-staffPicks">
-        We need a <span className="span-r">HERO!</span>
+        We need a <h4 style={{color: "red",marginLeft:"5px", marginRight: "5px"}}>HERO!</h4>
       </h2>
       <div className="container-staffpicks">
         {heroes.map((show, key) => {

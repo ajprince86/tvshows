@@ -35,7 +35,7 @@ function Home() {
   return (
     <div className="container-p">
       <div className="video-text-container">
-        <h1>WELCOME TO THE TVHUB </h1>
+        <h1 style={{display:"flex", alignContent:"center", justifyContent:"center"}}>WELCOME TO THE <h4 style={{color: "red",marginLeft:"5px", marginRight: "5px"}}> TVHUB </h4></h1>
       </div>
       <div className="video-div">
         <video className="video-home" autoPlay loop muted>
