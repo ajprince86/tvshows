@@ -47,7 +47,10 @@ function ShowCard() {
   useEffect(() => {
     fetchSeason();
   }, [id]);
- 
+  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="show-card-gp" >
