@@ -2,9 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
 import "./home.css";
-import { favoriteLists, upcomingShows } from "../services/constants.js";
+import { favoriteLists, upcomingShows, scolling_movie } from "../services/constants.js";
 import bgImage from "../videos/website-video.mp4";
 import "./home.scss"
+
 function Home() {
   const navigate = useNavigate();
   const breakPoints = [
@@ -67,17 +68,12 @@ function Home() {
           })}
         </Carousel>
       </div>
-      <div className = "scolling-img">
-        <img src='https://static.tvmaze.com/uploads/images/medium_portrait/28/72341.jpg' alt=''/>
-      <img src='https://static.tvmaze.com/uploads/images/medium_portrait/399/997839.jpg' alt=''/>
-<img src='https://static.tvmaze.com/uploads/images/medium_portrait/4/11322.jpg' alt=''/>
-<img src='https://static.tvmaze.com/uploads/images/medium_portrait/359/898433.jpg' alt=''/>
-<img src='https://static.tvmaze.com/uploads/images/medium_portrait/362/906711.jpg' alt=''/>
-<img src='https://static.tvmaze.com/uploads/images/medium_portrait/145/363769.jpg' alt=''/>
-<img src='https://static.tvmaze.com/uploads/images/medium_portrait/394/986248.jpg' alt=''/>
-<img src='https://static.tvmaze.com/uploads/images/medium_portrait/400/1001018.jpg' alt=''/>
-<img src='https://static.tvmaze.com/uploads/images/medium_portrait/394/986215.jpg' alt=''/>
-<img src='https://static.tvmaze.com/uploads/images/medium_portrait/396/991595.jpg' alt=''/>
+      <div className = "scolling-img" style="width:10%">
+      {scolling_movie.map((movie, key) => {
+            return (
+              <img 
+              src={movie.img} />
+            )})}
       </div>
     </div>
   );
