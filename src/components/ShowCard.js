@@ -8,7 +8,6 @@ import "../styles/showcard.css";
 import Carousel from "react-elastic-carousel";
 import pic_not_available from "../images/pic_not_available.jpg";
 
-
 function ShowCard() {
   const [data, setData] = useState([]);
   const { id } = useParams();
@@ -16,7 +15,6 @@ function ShowCard() {
   const [seasonData, setSeasonData] = useState([]);
 
   const navigate = useNavigate();
-
 
   async function fetchData() {
     try {
@@ -31,7 +29,11 @@ function ShowCard() {
     fetchData();
   }, [id]);
 
-//async-call to get seasons data 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  //async-call to get seasons data
   async function fetchSeason() {
     try {
       const res = await getSeasonDataById(id);
@@ -47,13 +49,13 @@ function ShowCard() {
   useEffect(() => {
     fetchSeason();
   }, [id]);
-  
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
+  
   return (
-    <div className="show-card-gp" >
+    <div className="show-card-gp">
       <div className="show-card-p1">
         {data.image ? (
           <img
@@ -63,41 +65,40 @@ function ShowCard() {
           />
         ) : (
           <img
-                className="not-avail-img-sc"
-                src={pic_not_available}
-                alt={pic_not_available}
-              />
+            className="not-avail-img-sc"
+            src={pic_not_available}
+            alt={pic_not_available}
+          />
         )}
         <div className="show-card-seasons">
           {/* displaying season data */}
           {/* <h5> Seasons available: {seasonData.length}</h5> */}
           {/* If Season data is not available, displaying default pic */}
           {seasonData ? (
-            <div className = "carousel-div">
+            <div className="carousel-div">
               <Carousel>
-                {seasonData.map((ele,index) => {
+                {seasonData.map((ele, index) => {
                   return ele.image ? (
                     <div>
-                      <p style = {{color: "yellow"}}>Season: {index + 1}</p>
+                      <p style={{ color: "yellow" }}>Season: {index + 1}</p>
                       <img
-                      className="carousel-img"
-                      src={ele.image.medium}
-                      alt=""
-                      id={ele.number}
-                      onClick={() => navigate(`/episodes/${ele.id}`)}
-                    />
-                    
+                        className="carousel-img"
+                        src={ele.image.medium}
+                        alt=""
+                        id={ele.number}
+                        onClick={() => navigate(`/episodes/${ele.id}`)}
+                      />
                     </div>
                   ) : (
                     <div>
-                      <p style = {{color: "yellow"}}>Season: {index + 1}</p>
-                    <img
-                      className="not-avail-img-sc"
-                      src={pic_not_available}
-                      alt={pic_not_available}
-                      id={ele.number}
-                      onClick={() => navigate(`/episodes/${ele.id}`)}
-                    />
+                      <p style={{ color: "yellow" }}>Season: {index + 1}</p>
+                      <img
+                        className="not-avail-img-sc"
+                        src={pic_not_available}
+                        alt={pic_not_available}
+                        id={ele.number}
+                        onClick={() => navigate(`/episodes/${ele.id}`)}
+                      />
                     </div>
                   );
                 })}
@@ -119,7 +120,7 @@ function ShowCard() {
 
       <div className="show-card-p2">
         <div className="show-card-c1">
-          <h1 style={{textDecoration:"underline"}}>{data.name}</h1>
+          <h1 style={{ textDecoration: "underline" }}>{data.name}</h1>
         </div>
         <div className="show-card-c2">
           <div>
@@ -147,8 +148,8 @@ function ShowCard() {
               <span>Network Country Name: </span>
               {data.network ? data.network.country.name : "data not available"}
             </h5>
-            <h5> 
-              <span>Seasons available:</span> 
+            <h5>
+              <span>Seasons available:</span>
               {seasonData.length}
             </h5>
           </div>
@@ -156,7 +157,9 @@ function ShowCard() {
             <h5>
               <span>Summary: </span>
               {data.summary ? (
-                <h5 id="sum-id">{JSON.stringify((data.summary).replace(/<[^>]+>/g,""))}</h5>
+                <h5 id="sum-id">
+                  {JSON.stringify(data.summary.replace(/<[^>]+>/g, ""))}
+                </h5>
               ) : (
                 "data is not available"
               )}
