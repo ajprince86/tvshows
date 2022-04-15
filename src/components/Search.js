@@ -44,7 +44,7 @@ function Search(){
         async function fetchData(){
             try {
                 const result = await getTvShowData(name);
-                if(!result){
+                if(result.length !== 0){
                     setTvSowData(result);
                 }else{
                 // alert("Not found any results! Try again!!"); 

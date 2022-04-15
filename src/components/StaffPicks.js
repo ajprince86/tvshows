@@ -1,12 +1,14 @@
 import { favoriteLists } from "../services/constants.js";
 import { useNavigate } from "react-router-dom";
+// import '../styles/home.css'
 
 const StaffPicks = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h2 style={{ color: "red" }}>The Staff Must Watch List</h2>
-      <div className="container">
+      <h2 className="h2-staffPicks">The Staff Must Watch List</h2>
+      <div className="container-staffpicks">
+
         {favoriteLists.map((show, key) => {
           return (
             <div className="show">
