@@ -8,7 +8,13 @@ Ajitha, Amari, Bosen
 
 <br />
 
-# TV HUB team:
-Ajitha, Amari, Bosen
+# Structure of our app
+
+![structure](.src/images/structure.GIF) 
 
 <br />
+# Tech we have used: 
+
+<ul> React </ul>
+<ul> Axios </ul>
+<ul> Router </ul>
