@@ -1,0 +1,57 @@
+.TvShows-gp{
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center  */
+
+    display: block;
+    margin-top: 15px;
+    margin-left: 30px;
+    /* align-content: center;
+    justify-content: center; */
+ 
+}
+.TvShows-p:hover{
+    cursor: pointer;
+}
+
+.tv-show-img{
+    width: 230px; 
+    height: 320px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: .2em; 
+}
+.tv-show-img:hover{
+  width: 235px;
+  height:325px;
+}
+.no-image-div{
+    width: 230px;
+    height: 320px;
+    border: 1px solid rgb(255, 225, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: .3em; 
+    color: rgb(255, 225, 0);
+    margin-left:75px;
+}
+.no-image-div:hover{
+    width: 235px; 
+    height: 325px;
+}
+.h2-no-img{
+    margin-top:5px;
+}
+
+
+.tv-not-avail-img{
+    width: 125px; 
+    height: 180px;
+    margin-top: 40px;
+    margin-bottom: 20px; 
+    border-radius: .2em; 
+}
+/* .tv-not-avail-img:hover{
+    width: 235px; 
+    height: 325px;
+} */
