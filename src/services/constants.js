@@ -1,3 +1,14 @@
+import obi_wan_kenobi from "../images/obi_wan_kenobi_main.jpg";
+import star_trek from "../images/star_trek.jpg";
+import resident_evil from "../images/resident_evil.jpg";
+import rings_power from "../images/rings_power.jpg";
+import house_dragon from "../images/house_dragon.jpg";
+import gremlins from "../images/gremlins.jpg";
+import sandman from "../images/sandman.jpg";
+import shining_girls from "../images/shining_girls.jpg";
+import terminal_list from "../images/terminal_list.jpg";
+import ms_marvel from "../images/ms_marvel.jpg";
+
 import axios from "axios";
 
 const CLIENT_URL1 = "https://api.tvmaze.com/search/shows?q=";
@@ -86,47 +97,60 @@ export const favoriteLists = [
 export const upcomingShows = [
   {
     id: 48090,
-    img: "https://static.tvmaze.com/uploads/images/medium_portrait/394/986248.jpg",
+    // img: "https://static.tvmaze.com/uploads/images/medium_portrait/394/986248.jpg",
+    img: star_trek,
   },
+
   {
     id: 52260,
-    img: "https://static.tvmaze.com/uploads/images/medium_portrait/395/988970.jpg",
+    // img: "https://static.tvmaze.com/uploads/images/medium_portrait/395/988970.jpg",
+    img: obi_wan_kenobi,
   },
   {
     id: 46273,
-    img: "https://static.tvmaze.com/uploads/images/medium_portrait/400/1001018.jpg",
+    // img: "https://static.tvmaze.com/uploads/images/medium_portrait/400/1001018.jpg",
+    img: resident_evil,
   },
   {
     id: 33352,
-    img: "https://static.tvmaze.com/uploads/images/medium_portrait/394/986215.jpg",
+    // img: "https://static.tvmaze.com/uploads/images/medium_portrait/394/986215.jpg",
+    img: rings_power,
   },
   {
     id: 44778,
-    img: "https://static.tvmaze.com/uploads/images/medium_portrait/396/991595.jpg",
+    // img: "https://static.tvmaze.com/uploads/images/medium_portrait/396/991595.jpg",
+    img: house_dragon,
   },
   {
     id: 42842,
-    img: "https://static.tvmaze.com/uploads/images/medium_portrait/277/693469.jpg",
+    // img: "https://static.tvmaze.com/uploads/images/medium_portrait/277/693469.jpg",
+    img: gremlins,
   },
   {
     id: 42827,
-    img: "https://static.tvmaze.com/uploads/images/medium_portrait/360/901551.jpg",
+    // img: "https://static.tvmaze.com/uploads/images/medium_portrait/360/901551.jpg",
+    img: sandman,
   },
   {
     id: 49334,
-    img: "https://static.tvmaze.com/uploads/images/medium_portrait/398/996391.jpg",
+    //   img: "https://static.tvmaze.com/uploads/images/medium_portrait/398/996391.jpg",
+    img: shining_girls,
   },
+
   {
     id: 47856,
-    img: "https://static.tvmaze.com/uploads/images/medium_portrait/262/656107.jpg",
+    // img: "https://static.tvmaze.com/uploads/images/medium_portrait/262/656107.jpg",
+    img: terminal_list,
   },
   {
     id: 43519,
-    img: "https://static.tvmaze.com/uploads/images/medium_portrait/399/999587.jpg",
+    //   img: "https://static.tvmaze.com/uploads/images/medium_portrait/399/999587.jpg",
+    // },
+    img: ms_marvel,
   },
 ];
 
-const romance = [
+export const romance = [
   {
     id: 42966,
     img: "https://static.tvmaze.com/uploads/images/medium_portrait/398/995479.jpg",
@@ -145,11 +169,7 @@ const romance = [
   },
 ];
 
-const action = [
-  {
-    id: 43031,
-    img: "https://static.tvmaze.com/uploads/images/medium_portrait/395/988157.jpg",
-  },
+export const action = [
   {
     id: 44391,
     img: "https://static.tvmaze.com/uploads/images/medium_portrait/395/988157.jpg",
@@ -168,7 +188,7 @@ const action = [
   },
 ];
 
-const classic = [
+export const classic = [
   {
     id: 825,
     img: "https://static.tvmaze.com/uploads/images/medium_portrait/6/15722.jpg",
