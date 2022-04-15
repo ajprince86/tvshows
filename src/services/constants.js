@@ -188,7 +188,7 @@ export const action = [
   },
 ];
 
-const classic = [
+export const classic = [
   {
     id: 825,
     img: "https://static.tvmaze.com/uploads/images/medium_portrait/6/15722.jpg",

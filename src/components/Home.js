@@ -6,17 +6,8 @@ import { upcomingShows } from "../services/constants.js";
 import StaffPicks from "../components/StaffPicks";
 import Romance from "../components/Romance";
 import Action from "../components/Action";
+import Classic from "../components/Classic";
 import bgImage from "../videos/website-video.mp4";
-import obi_wan_kenobi_main from "../images/obi_wan_kenobi_main.jpg";
-import star_trek from "../images/star_trek.jpg";
-import resident_evil from "../images/resident_evil.jpg";
-import rings_power from "../images/rings_power.jpg";
-import house_dragon from "../images/house_dragon.jpg";
-import gremlins from "../images/gremlins.jpg";
-import sandman from "../images/sandman.jpg";
-import shining_girls from "../images/shining_girls.jpg";
-import terminal_list from "../images/terminal_list.jpg";
-import ms_marvel from "../images/ms_marvel.jpg";
 
 function Home() {
   const navigate = useNavigate();
@@ -45,7 +36,7 @@ function Home() {
         </div>
       </div>
       <div>
-        <h2 className="home-color">Upcoming Shows</h2>
+        <h2 className="home-color">Soon To be released!!</h2>
         <Carousel>
           {upcomingShows.map((show, key) => {
             return (
@@ -76,6 +67,7 @@ function Home() {
       <StaffPicks />
       <Romance />
       <Action />
+      <Classic />
     </div>
   );
 }
