@@ -37,7 +37,7 @@ const team = [
             cell: "(347) 206-0678",
             github: "https://github.com/bosenli",
             linkedin: "https://www.linkedin.com/in/bosen-li-327a511b1/" ,
-            introduction: "bosen li is per scholar trainee" 
+            introduction: "While Mr. Bosen li studying for his master degree in Computer Science, he is a proud software engineer trainee at Per Scholar. He earned a Bachelor in Finance from CUNY, willing to continuously learn and adapt new things, pursuing excellency and result driven, to make huge Impact positively to the society." 
           }
 ] 
 

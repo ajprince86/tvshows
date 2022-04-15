@@ -55,13 +55,13 @@
     width:400px;
     align-items: center;
     justify-content: center;
-    margin-left:80px;
+    margin-left:180px;
 }
 .txt-search{
     width: 250px;
     height:30px;
     border-radius: .2em;
-    border-color:rgb(255, 225, 0);
+    border-color:#ffe100;
     color: rgb(255, 225, 0);
     font-size: large;
 }
@@ -74,16 +74,26 @@
 .p-search:hover{
     cursor: pointer;
 }
+.logo-div{
+    /* border: 1px solid red; */
+    display: flex;
+    cursor: pointer;
+}
 .logo-header{
     /* border: 1px solid red; */
     width:100px;
     height:100px;
     margin: 10px;
-    color:rgb(255, 225, 0);
-    background-color: hsl(56, 100%, 50%);
-    /* filter:brightness(1) invert(1); */
-    
+    /* color:rgb(255, 225, 0); */
+    /* background-color: hsl(56, 100%, 50%); */
+    /* filter:brightness(1) invert(0); */
     border: none;
+    /* mix-blend-mode: multiply; */
+}
+.header-h3{
+    color:rgb(255, 225, 0);
+    margin-top: 70px;
+    font-size:large;
 }
 
 

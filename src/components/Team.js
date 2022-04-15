@@ -1,8 +1,6 @@
 import '../styles/about.css';
 import { FaGithub, FaLinkedin, FaParagraph } from 'react-icons/fa';
 import { AiOutlineMail } from "react-icons/ai";
-import { GoLocation} from "react-icons/go";
-import { BsFillPhoneVibrateFill } from "react-icons/bs";
 
 function Team (props) {
     // Destructuring
@@ -15,7 +13,7 @@ function Team (props) {
     // console.log(name);
    
 
-    const {name, location, email, cell , github, linkedin, introduction} = props.teamData
+    const {name, email, github, linkedin, introduction} = props.teamData
    //const {first, title, last } = name
   
     return (
