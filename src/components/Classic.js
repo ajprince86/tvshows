@@ -5,10 +5,10 @@ const Classic = () => {
   const navigate = useNavigate();
   return (
     <div>
-
-      <h2 className="h2-staffPicks">Search the oldies</h2>
+      <h2 className="h2-staffPicks">
+        Search the <span className="span-r">OLDIES</span>
+      </h2>
       <div className="container-staffpicks">
-
         {classic.map((show, key) => {
           return (
             <div className="show">
