@@ -63,6 +63,17 @@ function Home() {
         </Carousel>
       </div>
 
+      <div className = "container-scoller-box">
+        <div className = "scolling-img" >
+          {scolling_movie.map((movie, key) => {
+              return (
+              <img 
+             
+              src={movie.img} />
+              )})}
+        </div>
+      </div>
+
       {/* <img src={obi_wan_kenobi_main} width="70%" alt="obi_wan" />
       <img src={star_trek} width="70%" height="500px" alt="star_trek" />
       <img src={resident_evil} width="70%" height="500px" alt="resident_evil" />
