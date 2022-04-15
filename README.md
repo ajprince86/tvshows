@@ -10,7 +10,7 @@ Ajitha, Amari, Bosen
 
 # Structure of our app
 
-![structure](.src/images/structure.GIF) 
+![structure](./src/images/structure.GIF) 
 
 <br />
 # Tech we have used: 
