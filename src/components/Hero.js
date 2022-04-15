@@ -1,15 +1,13 @@
-import { favoriteLists } from "../services/constants.js";
+import { heroes } from "../services/constants.js";
 import { useNavigate } from "react-router-dom";
-// import '../styles/home.css'
 
-const StaffPicks = () => {
+const Hero = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h2 className="h2-staffPicks">The Staff Must Watch List</h2>
-      <div className="container-staffpicks">
-
-        {favoriteLists.map((show, key) => {
+      <h2 style={{ color: "red" }}>We need a hero!!</h2>
+      <div className="container">
+        {heroes.map((show, key) => {
           return (
             <div className="show">
               <img
@@ -28,4 +26,4 @@ const StaffPicks = () => {
   );
 };
 
-export default StaffPicks;
+export default Hero;
