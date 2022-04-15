@@ -5,7 +5,7 @@ const Romance = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h2 className="h2-staffPicks">Love <span className="span-r">&#9829;</span>Shows</h2>
+      <h2 className="h2-staffPicks">Love <h4 style={{color: "red",marginLeft:"5px", marginRight: "5px"}}>&#9829;</h4>Shows</h2>
       <div className="container-staffpicks">
         {romance.map((show, key) => {
           return (
