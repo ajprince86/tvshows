@@ -29,13 +29,14 @@ function Home() {
   // ];
   return (
     <div className="container-p">
-      <div>
+      <div className="video-text-container">
+          <h1>WELCOME TO TVHUB - where fun begins!</h1>
+      </div>
+      <div className="video-div">
         <video className="video-home" autoPlay loop muted>
           <source src={bgImage} type="video/mp4" />
         </video>
-        <div className="video-text-container">
-          <h1>WELCOME TO TVHUB-where fun begins!</h1>
-        </div>
+        
       </div>
       <div>
         <h2 className="home-color">Soon To be released!!</h2>

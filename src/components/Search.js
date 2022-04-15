@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { getTvShowData } from '../services/constants'
 import TvShows from "./TvShows";
 import '../styles/search.css';
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate} from "react-router-dom";
+
 
 function Search(){
     const [tvShowData, setTvSowData] = useState([]);
+    const navigate = useNavigate();
     // const [query, setQuery] = useState('');
 
     // const [queryLog, setQueryLog] = useState([]);
@@ -42,10 +44,12 @@ function Search(){
         async function fetchData(){
             try {
                 const result = await getTvShowData(name);
-                if(result !== []){
+                if(!result){
                     setTvSowData(result);
                 }else{
-                alert("Not found any results! Try again!!"); 
+                // alert("Not found any results! Try again!!"); 
+                navigate("/*"); 
+                      
                 }
             } catch (error) {
                 console.log(error);
