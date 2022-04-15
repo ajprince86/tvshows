@@ -7,6 +7,7 @@ import StaffPicks from "../components/StaffPicks";
 import Romance from "../components/Romance";
 import Action from "../components/Action";
 import Classic from "../components/Classic";
+import Hero from "../components/Hero";
 import bgImage from "../videos/website-video.mp4";
 
 function Home() {
@@ -36,7 +37,9 @@ function Home() {
         </div>
       </div>
       <div>
-        <h2 className="home-color">Soon To be released!!</h2>
+        <h2 style={{ color: "red" }} className="home-color">
+          Soon To be released!!
+        </h2>
         <Carousel>
           {upcomingShows.map((show, key) => {
             return (
@@ -67,6 +70,7 @@ function Home() {
       <StaffPicks />
       <Romance />
       <Action />
+      <Hero />
       <Classic />
     </div>
   );

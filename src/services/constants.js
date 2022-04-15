@@ -216,7 +216,7 @@ export const classic = [
   },
 ];
 
-const anime = [
+export const anime = [
   {
     id: 2103,
     img: "https://static.tvmaze.com/uploads/images/medium_portrait/11/29190.jpg",
@@ -227,7 +227,7 @@ const anime = [
   },
 ];
 
-const heros = [
+export const heroes = [
   {
     id: 43518,
     img: "https://static.tvmaze.com/uploads/images/medium_portrait/398/995334.jpg",
