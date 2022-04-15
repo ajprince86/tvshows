@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
 import "./home.css";
 import { favoriteLists, upcomingShows, scolling_movie } from "../services/constants.js";
-import { upcomingShows } from "../services/constants.js";
 import StaffPicks from "../components/StaffPicks";
 import Romance from "../components/Romance";
 import Action from "../components/Action";
@@ -61,7 +60,7 @@ function Home() {
           {scolling_movie.map((movie, key) => {
               return (
               <img 
-              style= {{width: "150px"}}
+             
               src={movie.img} />
               )})}
         </div>
