@@ -3,7 +3,11 @@ import { useNavigate } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
 import "./home.css";
 
-import { favoriteLists, upcomingShows, scolling_movie } from "../services/constants.js";
+import {
+  favoriteLists,
+  upcomingShows,
+  scolling_movie,
+} from "../services/constants.js";
 import StaffPicks from "../components/StaffPicks";
 import Romance from "../components/Romance";
 import Action from "../components/Action";
@@ -31,7 +35,7 @@ function Home() {
   return (
     <div className="container-p">
       <div className="video-text-container">
-        <h1>WELCOME TO TVHUB - where fun begins!</h1>
+        <h1>WELCOME TO THE TVHUB </h1>
       </div>
       <div className="video-div">
         <video className="video-home" autoPlay loop muted>
@@ -59,35 +63,20 @@ function Home() {
           })}
         </Carousel>
       </div>
-
-
-
-      {/* <img src={obi_wan_kenobi_main} width="70%" alt="obi_wan" />
-      <img src={star_trek} width="70%" height="500px" alt="star_trek" />
-      <img src={resident_evil} width="70%" height="500px" alt="resident_evil" />
-      <img src={rings_power} width="70%" height="500px" alt="rings_power" />
-      <img src={house_dragon} width="70%" height="500px" alt="house_dragon" />
-      <img src={gremlins} width="70%" height="500px" alt="gremlins" />
-      <img src={sandman} width="70%" height="500px" alt="sandman" />
-      <img src={shining_girls} width="70%" height="500px" alt="shining_girls" />
-      <img src={terminal_list} width="70%" height="500px" alt="terminal_list" />
-      <img src={ms_marvel} width="70%" height="500px" alt="ms_marvel" /> */}
       <StaffPicks />
       <Romance />
       <Action />
       <Hero />
       <Classic />
-
-      <div className = "container-scoller-box">
-      <div className = "scolling-img" >
-      {scolling_movie.map((movie, key) => {
-            return (
-              <img 
-              style= {{width: "250px"}}
-              src={movie.img} />
-            )})}
-      </div>
-
+      <div className="container-scoller-box">
+        <div className="scolling-img">
+          {scolling_movie.map((movie, key) => {
+            return <img style={{ width: "250px" }} src={movie.img} />;
+          })}
+        </div>
+        <h1>
+          <span className="span-r">ENDLESS SEARCHES!!</span>
+        </h1>
       </div>
     </div>
   );

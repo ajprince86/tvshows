@@ -6,9 +6,10 @@ const StaffPicks = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h2 className="h2-staffPicks">The Staff Must Watch List</h2>
+      <h2 className="h2-staffPicks">
+        Our <span className="span-r">MUST</span> watch list
+      </h2>
       <div className="container-staffpicks">
-
         {favoriteLists.map((show, key) => {
           return (
             <div className="show">
