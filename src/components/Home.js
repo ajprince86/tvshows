@@ -69,14 +69,14 @@ function Home() {
         </Carousel>
       </div>
       <div className = "container-scoller-box">
-      <div className = "scolling-img" >
-      {scolling_movie.map((movie, key) => {
-            return (
+        <div className = "scolling-img" >
+          {scolling_movie.map((movie, key) => {
+              return (
               <img 
               style= {{width: "150px"}}
               src={movie.img} />
-            )})}
-      </div>
+              )})}
+        </div>
       </div>
     </div>
   );
