@@ -7,3 +7,8 @@ TV HUB is a web app for people who feel more at home looking up into the TV show
 Ajitha, Amari, Bosen
 
 <br />
+
+# TV HUB team:
+Ajitha, Amari, Bosen
+
+<br />

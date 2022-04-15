@@ -5,7 +5,7 @@ const Action = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h2>Time for some action</h2>
+      <h2 style={{ color: "red" }}>Time for some action</h2>
       <div className="container">
         {action.map((show, key) => {
           return (

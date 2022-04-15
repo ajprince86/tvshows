@@ -5,7 +5,7 @@ const Classic = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h2>Search the oldies</h2>
+      <h2 style={{ color: "red" }}>Search the oldies</h2>
       <div className="container">
         {classic.map((show, key) => {
           return (
