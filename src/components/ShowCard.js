@@ -116,7 +116,7 @@ function ShowCard() {
 
       <div className="show-card-p2">
         <div className="show-card-c1">
-          <h1>{data.name}</h1>
+          <h1 style={{textDecoration:"underline"}}>{data.name}</h1>
         </div>
         <div className="show-card-c2">
           <div>

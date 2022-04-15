@@ -1,6 +1,7 @@
 :root {
-    --duration: 20s;
-    --delay: 20s;
+  --duration: 5s;
+    // --duration: 20s;
+    // --delay: 20s;
   }
   
 //   html {
@@ -12,8 +13,10 @@
     position: relative;
     margin: 0 auto;
     padding: 0 1rem;
-    width: 100vw;
-    height: 100vh;
+    // width: 100vw;
+    // height: 100vh;
+    width:90vw;
+    height:35vh;
     overflow: hidden;
     animation: spin var(--duration) var(--delay) linear infinite;
     transform-style: preserve-3d;
@@ -22,7 +25,7 @@
   
   @mixin setImage($a, $x) {
     --name: float-up-#{$a};
-    --duration: calc(20s * #{$a});
+    --duration: calc(8s * #{$a});
     left: #{$x}vw;
     z-index: -1 * $a;
   }
@@ -34,14 +37,16 @@
     top: 0;
     left: 0;
     width: 33vw;
-    transform: translateY(200vh);
+    // transform: translateY(100vh);
+    transform: translateY(20vh);
     animation: var(--name) var(--duration) linear infinite;
     box-shadow: 1px 3px 15px rgba(0,0,0,0.5);
     z-index: 1;
   
     @for $i from 1 through 10 {
       &:nth-child(#{$i}) {
-        animation-delay: ($i - 1) * -3s;
+        // animation-delay: ($i - 1) * -3s;
+        animation-delay: ($i - 1) * -0.5s;
       }
     }
     
