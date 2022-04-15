@@ -13,7 +13,7 @@ TV HUB is a web app for people who feel more at home looking up into the TV show
 
 # Structure of our app
 
-![structure](.src/images/structure.GIF) 
+![structure](./src/images/structure.GIF) 
 
 <br />
 # Tech we have used: 
