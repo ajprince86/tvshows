@@ -22,3 +22,5 @@ TV HUB is a web app for people who feel more at home looking up into the TV show
 <ul> Axios </ul>
 <ul> Router </ul>
 
+### Netlify link to test out yourself
+ https://fabulous-gnome-3885df.netlify.app/
