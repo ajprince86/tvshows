@@ -79,10 +79,34 @@ height: 40%;
 .rec.rec-arrow:disabled {
   visibility: hidden;
 }
+.span-r{
+  color: red;
+  margin-left:5px;
+  margin-right:5px;
+  font-size: large;
+}
 
 
 /* scolling */
 .container-scoller-box {
-  width: 80%;
+  margin-top:80px;
+  width: 100%;
+  /* border: 1px solid red; */
+  margin-bottom: 100px;
 }
-
+.h2-staffPicks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:70px;
+  color:rgb(255, 225, 0);
+}
+.container-staffpicks{
+  margin-top: -30px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+.show{
+  margin-left:10px;
+}

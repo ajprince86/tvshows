@@ -5,8 +5,8 @@ const Hero = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h2 style={{ color: "red" }}>We need a hero!!</h2>
-      <div className="container">
+      <h2 className="h2-staffPicks">We need a hero!!</h2>
+      <div className="container-staffpicks">
         {heroes.map((show, key) => {
           return (
             <div className="show">

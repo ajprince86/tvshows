@@ -5,8 +5,8 @@ const Romance = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h2>Love &#9829; Shows</h2>
-      <div className="container">
+      <h2 className="h2-staffPicks">Love <span className="span-r">&#9829;</span>Shows</h2>
+      <div className="container-staffpicks">
         {romance.map((show, key) => {
           return (
             <div className="show">

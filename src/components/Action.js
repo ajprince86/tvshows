@@ -5,8 +5,8 @@ const Action = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h2 style={{ color: "red" }}>Time for some action</h2>
-      <div className="container">
+      <h2 className="h2-staffPicks">Time for some action</h2>
+      <div className="container-staffpicks">
         {action.map((show, key) => {
           return (
             <div className="show">
