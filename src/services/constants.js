@@ -259,3 +259,18 @@ const heros = [
 ];
 
 //Staff picks
+
+//scolling movie
+export const scolling_movie = [
+  {img: "https://static.tvmaze.com/uploads/images/medium_portrait/28/72341.jpg" },
+{img:'https://static.tvmaze.com/uploads/images/medium_portrait/399/997839.jpg'},
+{img:'https://static.tvmaze.com/uploads/images/medium_portrait/4/11322.jpg' },
+{img:'https://static.tvmaze.com/uploads/images/medium_portrait/359/898433.jpg' },
+{img:'https://static.tvmaze.com/uploads/images/medium_portrait/362/906711.jpg' },
+{img:'https://static.tvmaze.com/uploads/images/medium_portrait/145/363769.jpg' },
+{img:'https://static.tvmaze.com/uploads/images/medium_portrait/394/986248.jpg' },
+{img:'https://static.tvmaze.com/uploads/images/medium_portrait/400/1001018.jpg'},
+{img:'https://static.tvmaze.com/uploads/images/medium_portrait/394/986215.jpg' },
+{img:'https://static.tvmaze.com/uploads/images/medium_portrait/396/991595.jpg' },
+];
+
