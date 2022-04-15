@@ -13,6 +13,7 @@ function AboutUs() {
          return <Team teamData = {teamData} key={index}/>
        })}
       </div>
+      
     </div>
   )
 }

@@ -177,7 +177,6 @@
   &:nth-child(10) {
     @include setImage(2, 0);
   }
-}
 
 @keyframes float-up-3 {
   from {
@@ -187,6 +186,7 @@
     transform: translateY(-200vh) translateZ(-50vh);
   }
 }
+
 
 @keyframes shrink {
   0% {
